@@ -1,0 +1,107 @@
+:root {
+    --primary: #2563eb;
+    --secondary: #7c3aed;
+    --accent: #f59e0b;
+    --dark: #1e293b;
+    --light: #f8fafc;
+    --radius: 8px;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--light);
+    color: var(--dark);
+    margin: 0;
+    padding: 2rem;
+    transition: background 0.3s ease;
+}
+
+.app {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1, h2 {
+    color: var(--primary);
+}
+
+.controls {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.controls input, .controls select, .controls button {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: var(--radius);
+    font-size: 1rem;
+}
+
+.controls button {
+    background: var(--primary);
+    color: var(--light);
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.controls button:hover {
+    background: var(--secondary);
+}
+
+.search-filter {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.task-lists {
+    display: flex;
+    gap: 2rem;
+}
+
+.priority-group, #completed-list {
+    flex: 1;
+}
+
+.task {
+    background: white;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task.completed {
+    opacity: 0.7;
+    text-decoration: line-through;
+}
+
+.task button {
+    background: var(--accent);
+    color: var(--dark);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.task button:hover {
+    background: var(--secondary);
+    color: var(--light);
+}
+
+.dark-mode {
+    background: var(--dark);
+    color: var(--light);
+}
+
+.dark-mode .task {
+    background: #334155;
+    color: var(--light);
+}
